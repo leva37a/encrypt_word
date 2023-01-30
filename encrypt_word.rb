@@ -26,18 +26,16 @@ loop do
     break
   else
     puts "Каким способом зашифровать текст:"
-
     puts  "1. MD5;"
-
     puts  "2. SHA1"
-
+    puts  "3. SHA2"
     puts
 
 
     encryption = 0
 
-    while !encryption.between?(1, 2) do
-      puts "Введите 1 или 2"
+    while !encryption.between?(1, 3) do
+      puts "Введите 1, 2 или 3"
 
       encryption = STDIN.gets.to_i
     end
@@ -45,9 +43,10 @@ loop do
     encrypted =
       if encryption == 1
         Digest::MD5.hexdigest('phrase')
-
       elsif encryption == 2
         Digest::SHA1.hexdigest('phrase')
+      elsif encryption == 3
+        Digest::SHA2.hexdigest('phrase')
       end
     puts "Вот что получилось:"
 
