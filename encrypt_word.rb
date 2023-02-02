@@ -27,8 +27,8 @@ loop do
   else
     puts "Каким способом зашифровать текст:"
     puts  "1. MD5;"
-    puts  "2. SHA1"
-    puts  "3. SHA2"
+    puts  "2. SHA1;"
+    puts  "3. SHA2;"
     puts
 
 
